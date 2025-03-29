@@ -1,0 +1,28 @@
+device : 'cuda:2'
+seed : 211
+
+# vocoder hyperparameters
+vocoder_config:
+  hidden_dim : 256
+  nharmonics : 80
+  nbands : 257
+  attenuate : 0.01
+  fs : 16000
+  framesize : 80
+  spkr_emb_dim : 128
+  reverb_len : 1025
+  forward_expansion: 4
+  use_causal_conv : True
+  kernel_size : 3
+  n_blocks : 3
+
+# spkr encoder 
+spkr_encoder_config:
+  spkr_emb_dim : 128
+  freeze_wavlm : True
+  use_std : False
+  hidden_dim : 256
+  dilations : [1, 2, 4, 8, 16]
+  nstacks : 2
+  forward_expansion : 4
+  n_midlayers : 1

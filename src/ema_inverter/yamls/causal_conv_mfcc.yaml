@@ -1,0 +1,10 @@
+device : 'cuda:1'
+seed : 324
+
+# model config
+inverter_config : 
+  in_channels : 24
+  hidden_dim  : 384
+  out_channels : 12
+  kernel_size : 7
+

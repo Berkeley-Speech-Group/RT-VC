@@ -1,0 +1,27 @@
+# general config
+device: 'cuda:7'
+seed: 42
+
+# pitch_tracker config
+pitch_tracker_config:
+  nbins: 256
+  fmin: 50
+  fmax: 500
+  f_base: 10
+  use_periodicity_head: True
+  use_loudness_head: True
+  hidden_dim: 384
+  forward_expansion: 1
+  n_midlayers: 1
+
+  use_causal_conv: True
+  convnet_config:
+    in_channels: 128
+    hidden_dim: 384
+    out_channels: 384
+    kernel_size: 3
+
+
+
+
+
